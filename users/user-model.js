@@ -9,9 +9,9 @@ module.exports = {
     findGen, 
 }
 
-function find(){
+function find(filter){
     return db('users').select('id', 'username', 'password','departments')
-    .where('departments', 'finance')
+    .where('departments', filter)
 }
 function findSales(){
     return db('users').select('id', 'username', 'password','departments')
